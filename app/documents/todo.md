@@ -37,7 +37,7 @@ PHP Website for bank management.
 - doc info for each page
 - pages: 
 
-html header - logo, menu 
+html header - company name, menu 
 html body
 
 menu:
