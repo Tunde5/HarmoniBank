@@ -27,39 +27,46 @@ PHP Website for bank management.
 
 ## Database
 
-- ERD diagram complete
-- SQL commands to create database
-- SQL commands to add initial test records
++ ERD diagram complete
++ SQL commands to create database
++ backup in json file
++ check in phpmyadmin designer
++ SQL commands to add initial test records
 
 ## HTML frontend
 
-- review number of pages
++ review number of pages
 - doc info for each page
 - pages: 
 
-html header - company name, menu 
++ html header - company name, menu 
 html body
 
-menu:
-home 
-login-logout
-customers /
-employers /
-transactions /
++ menu:
++ home 
++ login-logout
++ customers /
++ employers /
++ transactions /
 
 pages:
-home
-list customers; name, profile link, 
-customer profile page: name, date created, nr of transaction, link to transactions, all data
++ index; menu
++ home-login
++ list customers; name, profile link, 
+- customer profile page: name, date created, nr of transaction, link to transactions, all data
 
 transactions page: selected by customer, list all 
 list employers: name, empl. profile link
 employer profile page: name, branch, date..
 
-- actions menu: create new, update, delete
+- custumer profile transactions link
 
++- actions menu: create new, update, delete
 
-
+- actions:
+- delete button
+- edit/modify button: list profile with inputs (fill old), save button
+- add new: list profile with inputs (empty), save button
 
 
 
