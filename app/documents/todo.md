@@ -64,8 +64,8 @@ employer profile page: name, branch, date..
 +- actions menu: create new, update, delete
 
 - actions:
-- delete button
-- edit/modify button: list profile with inputs (fill old), save button
++ delete button
++ edit/modify button: list profile with inputs (fill old), save button
 - add new: list profile with inputs (empty), save button
 
 
