@@ -7,7 +7,7 @@ PHP Website for bank management.
 
 + local project directory
 + todo text file
-- github: upload project
++ github: upload project
 + install docker server
 + install php docker image 
 + test docker address; localhost:8080
