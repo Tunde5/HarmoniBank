@@ -1,0 +1,46 @@
+{
+  "users": {
+    "ID": "PK",
+    "accountNumber": "VARCHAR",
+    "accountType": "VARCHAR",
+    "balance": "DECIMAL",
+    "active": "BOOLEAN",
+    "dateCreated": "DATETIME",
+    "dateModified": "DATETIME",
+    "username": "VARCHAR",
+    "password": "VARCHAR",
+    "ID": "FK",
+    "firstName": "VARCHAR",
+    "lastName": "VARCHAR",
+    "dob": "DATE",
+    "phoneNumber": "VARCHAR",
+    "email": "VARCHAR",
+    "address": "VARCHAR"
+  },
+  "transactions": {
+    "ID": "PK",
+    "IDAccountFrom": "FK",
+    "IDAccountTo": "FK",
+    "dateCreated": "DATETIME",
+    "dateModified": "DATETIME",
+    "IDBranch": "FK",
+    "IDEmployee": "FK",
+    "amount": "DECIMAL",
+    "IDTrType": "FK"
+  },
+  "employee": {
+    "ID": "PK",
+    "firstName": "VARCHAR",
+    "lastName": "VARCHAR",
+    "role": "VARCHAR",
+    "branchID": "FK",
+    "dateCreated": "DATETIME",
+    "dateModified": "DATETIME",
+    "active": "BOOLEAN"
+  },
+  "branch": {
+    "ID": "PK",
+    "name": "VARCHAR",
+    "location": "VARCHAR"
+  }
+}
