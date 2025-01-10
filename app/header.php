@@ -9,7 +9,8 @@
 <body>
 <div class="container mt-5">
 
-<h1>Hoarmoni Bank</h1>
+<h1>Harmoni Bank</h1>
+<img src="assets/img/logo.webp" width="100"  class="img-fluid" alt="">
 
 <header class="mb-4">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
