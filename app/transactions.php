@@ -10,8 +10,10 @@ $transactions = $conn->query($query);
 
 ?>
 
-<?php include 'header.php'; // Include the header file ?>
-    
+<?php 
+$page_title = "Transactions";
+include 'header.php'; 
+?>
     <h1 class="text-center">Transaction List</h1>
 
 

@@ -28,8 +28,10 @@ if (isset($_GET["logout"])) {
 }
 ?>
 
-    <?php include 'header.php'; ?>
-    <h1 class="text-center">Login</h1>
+<?php 
+$page_title = "Login";
+include 'header.php'; 
+?>    <h1 class="text-center">Login</h1>
 
     <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]): ?>
         <div class="text-center">

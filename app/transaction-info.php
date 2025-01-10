@@ -26,8 +26,10 @@ if (isset($_GET['id'])) {
 }      
 ?>
 
-    <?php include 'header.php'; // Include the header file ?>
-
+<?php 
+$page_title = "Add transaction";
+include 'header.php'; 
+?>
     <a href="transactions.php" class="btn btn-secondary mb-4">Back to list</a>
 
     <h1 class="text-center">Transaction Detais</h1>

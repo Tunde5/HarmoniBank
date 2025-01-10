@@ -11,8 +11,10 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-  <?php include 'header.php'; ?>
-
+<?php 
+$page_title = "Add transaction";
+include 'header.php'; 
+?>
     <a href="customers.php" class="btn btn-secondary mb-4">Back to list</a>
 
     <?php if (isset($customer)): ?>
