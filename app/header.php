@@ -1,3 +1,20 @@
+<?php 
+
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    // Check if the user is not logged in and the current page is not login.php
+    if (
+        (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true)
+        && basename($_SERVER['PHP_SELF']) !== 'login.php'
+        ) {
+        // Redirect to login.php
+        header('Location: login.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +41,7 @@
                         <a class="nav-link" href="home.php"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login-logout.php">Login-Logout</a>
+                        <a class="nav-link" href="login.php">Login-Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="customers.php">Customers</a>
