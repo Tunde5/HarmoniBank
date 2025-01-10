@@ -7,9 +7,19 @@ $transaction = null;
 if (isset($_GET['id'])) {
     $transactionId = $_GET['id'];
 
-    $query = "SELECT t.ID, t.IDAccountFrom, t.IDAccountTo, t.amount, t.dateCreated, tt.name
+    $query = "SELECT t.ID, 
+            u1.firstName as u1_firstName, 
+            u1.lastName as u1_lastName, 
+            u2.firstName as u2_firstName, 
+            u2.lastName as u2_lastName, 
+            t.IDAccountTo, 
+            t.amount, 
+            t.dateCreated, 
+            tt.name
             FROM transactions t
             JOIN transaction_types tt ON t.IDTrType = tt.ID
+            JOIN users u1 ON t.IDAccountFrom = u1.ID
+            JOIN users u2 ON t.IDAccountTo = u2.ID
             WHERE t.ID = " . $transactionId;
     $result = $conn->query($query);
     $transaction = $result->fetch_assoc();
@@ -17,15 +27,17 @@ if (isset($_GET['id'])) {
 ?>
 
     <?php include 'header.php'; // Include the header file ?>
-    
+
+    <a href="transactions.php" class="btn btn-secondary mb-4">Back to list</a>
+
     <h1 class="text-center">Transaction Detais</h1>
 
     <?php
 
         if ($transaction) {
             echo '<p><strong>Transaction ID:</strong> ' . $transaction['ID'] . '</p>';
-            echo '<p><strong>From Customer:</strong> ' . $transaction['IDAccountFrom'] . '</p>';
-            echo '<p><strong>To Customer:</strong> ' . $transaction['IDAccountTo'] . '</p>';
+            echo '<p><strong>From Customer:</strong> ' . $transaction['u1_firstName'] . " " . $transaction['u1_lastName'] . '</p>';
+            echo '<p><strong>To Customer:</strong> ' . $transaction['u2_firstName'] . " " . $transaction['u2_lastName'] . '</p>';
             echo '<p><strong>Amount:</strong> ' . $transaction['amount'] . '</p>';
             echo '<p><strong>Date Created:</strong> ' . $transaction['dateCreated'] . '</p>';
             echo '<p><strong>Transaction Type:</strong> ' . $transaction['name'] . '</p>';

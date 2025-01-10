@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
 $page_title = "Employee profile";
 include 'header.php'; 
 ?>
-    <a href="employee.php" class="btn btn-secondary mb-4">Back to Employee List</a>
+    <a href="employee.php" class="btn btn-secondary mb-4">Back to list</a>
 
     <?php if (isset($employee)): ?>
         <h1 class="text-center">Profile Page</h1>

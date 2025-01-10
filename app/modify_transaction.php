@@ -55,6 +55,8 @@ $conn->close();
 
 <?php include 'header.php'; ?>
 
+    <a href="transactions.php" class="btn btn-secondary mb-4">Back to list</a>
+
     <h1 class="mb-4">Modify Transaction</h1>
     <form method="POST">
         <div class="mb-3">

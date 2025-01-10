@@ -31,6 +31,8 @@ $page_title = "Add transaction";
 include 'header.php'; 
 ?>
 
+    <a href="transactions.php" class="btn btn-secondary mb-4">Back to list</a>
+
     <h1 class="mb-4">Add New Transaction</h1>
     <form method="POST">
         <div class="mb-3">
