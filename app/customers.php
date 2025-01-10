@@ -6,18 +6,10 @@ $query = "SELECT ID, firstName, lastName FROM users";
 $result = $conn->query($query);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customers</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container mt-5">
-  
-    <?php include 'header.php'; ?>
+<?php 
+$page_title = "Customers";
+include 'header.php'; 
+?>
 
     <h1 class="text-center">Customer List</h1>
     <table class="table table-bordered mt-4">
@@ -47,7 +39,7 @@ $result = $conn->query($query);
     <div class="mt-4">
         <a href="add_transaction.php" class="btn btn-success">Add New Transaction</a>
     </div>
-</div>
+
 
 <?php include 'footer.php'; ?>
 

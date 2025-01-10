@@ -26,16 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Transaction</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container mt-5">
+<?php 
+$page_title = "Add transaction";
+include 'header.php'; 
+?>
+
     <h1 class="mb-4">Add New Transaction</h1>
     <form method="POST">
         <div class="mb-3">
@@ -64,8 +59,6 @@ $conn->close();
         </div>
         <button type="submit" class="btn btn-primary">Add Transaction</button>
     </form>
-</div>
-
 
 <?php
 include('footer.php');

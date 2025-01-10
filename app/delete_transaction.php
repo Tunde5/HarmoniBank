@@ -2,7 +2,10 @@
 include 'db_connection.php'; // Include your database connection file
 ?>
 
-html header menu...
+<?php 
+$page_title = "Delete transaction";
+include 'header.php'; 
+?>
 
 <?php
 // Check if ID is provided

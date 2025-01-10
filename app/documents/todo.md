@@ -8,7 +8,8 @@ PHP Website for bank management.
 + local project directory
 + todo text file
 + github: upload project
-+ install docker server
++ install docker server (try in future)
++ use xampp
 + install php docker image 
 + test docker address; localhost:8080
 + test php works: test index.php running
@@ -16,9 +17,9 @@ PHP Website for bank management.
 
 ## project
 
-- review assigment
++ review assigment
 
-- planning
++ planning
 
 + folder structure: docker files
 /app /src /doc /dist /test /info   
@@ -46,27 +47,30 @@ html body
 + home 
 + login-logout
 + customers /
-+ employers /
++ employees /
 + transactions /
 
 pages:
 + index; menu
 + home-login
 + list customers; name, profile link, 
-- customer profile page: name, date created, nr of transaction, link to transactions, all data
++ customer profile page: 
++ name, birthday, date created, 
+- customer nr of transaction, link to transactions
 
-transactions page: selected by customer, list all 
-list employers: name, empl. profile link
-employer profile page: name, branch, date..
-
-- custumer profile transactions link
++ transactions page: 
+- selected by customer, list all 
++ list employees: name, empl. profile link
++ employee profile page: name, branch, date..
+- show relations, accountFrom, accountTo, branch name on profile eg.
+- custumer/account name profile transactions link
 
 +- actions menu: create new, update, delete
 
 - actions:
 + delete button
 + edit/modify button: list profile with inputs (fill old), save button
-- add new: list profile with inputs (empty), save button
++ add new: list profile with inputs (empty), save button
 
 
 

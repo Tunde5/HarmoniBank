@@ -11,18 +11,10 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employer Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container mt-5">
-    <?php include 'header.php'; // Include the header file ?>
-    
+<?php 
+$page_title = "Employee profile";
+include 'header.php'; 
+?>
     <a href="employee.php" class="btn btn-secondary mb-4">Back to Employee List</a>
 
     <?php if (isset($employee)): ?>
@@ -45,5 +37,5 @@ if (isset($_GET['id'])) {
         echo '<a href="delete_transaction.php?id=' . $transaction['ID'] . '" class="btn btn-danger" onclick="return confirm(\'Are you sure you want to delete this transaction?\')">Delete Transaction</a>';
         echo '</div>';
     ?>
-</div>
+
 <?php include 'footer.php'; ?>
