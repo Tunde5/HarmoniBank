@@ -27,8 +27,9 @@
 <div class="container mt-5">
 
 <h1>Harmoni Bank</h1>
+<a href="index.php">
 <img src="assets/img/logo.webp" width="100"  class="img-fluid" alt="">
-
+</a>
 <header class="mb-4">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
