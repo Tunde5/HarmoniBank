@@ -38,9 +38,8 @@ include 'header.php';
     echo '</table>';
     ?>
     
-    <!-- Action Section: Add New Transaction Button -->
     <div class="mt-4">
-        <a href="add_transaction.php" class="btn btn-success">Add New Transaction</a>
+        <a href="add_transaction.php" class="btn btn-success">Add New</a>
     </div>
 </div>
 

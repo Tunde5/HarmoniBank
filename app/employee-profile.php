@@ -5,7 +5,7 @@ include 'db_connection.php'; // Include your database connection file
 
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
-    $query = "SELECT firstName, lastName, role, active, branchID, dateCreated FROM employee WHERE ID = $id";
+    $query = "SELECT ID, firstName, lastName, role, active, branchID, dateCreated FROM employee WHERE ID = $id";
     $result = $conn->query($query);
     $employee = $result->fetch_assoc();
 }
@@ -32,9 +32,9 @@ include 'header.php';
    <?php
   // Action Section: Modify and Delete Buttons
         echo '<div class="mt-4">';
-        echo '<a href="modify_transaction.php?id=' . $transaction['ID'] . '" class="btn btn-primary">Modify Transaction</a>';
+        echo '<a href="modify_employee.php?id=' . $employee['ID'] . '" class="btn btn-primary">Modify </a>';
         echo ' ';
-        echo '<a href="delete_transaction.php?id=' . $transaction['ID'] . '" class="btn btn-danger" onclick="return confirm(\'Are you sure you want to delete this transaction?\')">Delete Transaction</a>';
+        echo '<a href="delete_employee.php?id=' . $employee['ID'] . '" class="btn btn-danger" onclick="return confirm(\'Are you sure you want to delete this record?\')">Delete</a>';
         echo '</div>';
     ?>
 
